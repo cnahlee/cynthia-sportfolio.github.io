@@ -1,0 +1,225 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #081b29;
+    color: #ededed;
+}
+.header
+{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 10%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+    
+}
+.profile-pic {
+    width: 400px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: auto; 
+}
+.logo
+{
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a{
+    text-decoration: none;
+    color:#ededed;
+    font-size:18px;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.navbar a:hover,
+.navbar a.active
+{
+    color: #e69595; 
+}
+
+.home
+{
+display: flex;
+height: 100vh;/*ba3adton aan el nav bar*/
+align-items: center;
+padding: 0 10%;
+align-items: center;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+
+}
+.home-content  h3{
+    font-size: 36px;
+    font-weight:700 ;
+    color:#e69595;
+}
+.home-content .animate
+{
+    position:relative;
+    width:32.8rem;
+}
+.home-content .animate h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+   
+    -webkit-text-stroke: .7px var(--main-color);
+}
+.home-content p{
+    font-size: 16px;
+}
+/* General grid container styles */
+.firstgrid, .secondgrid {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap onto the next row if needed */
+    max-width: 1200px;
+    gap: 20px; /* Adds consistent spacing between items */
+    margin: 0 auto; /* Centers the grid */
+    justify-content: center; /* Ensures alignment in the center */
+    padding: 20px;
+}
+
+/* Individual image containers */
+.img1, .img2 {
+    display: flex;
+    flex-direction: column; /* Align image and text vertically */
+    align-items: center;
+    text-align: center;
+    width: calc(33.333% - 20px); /* Ensures 3 items per row with space */
+    max-width: 300px; /* Optional: Restrict maximum width for consistency */
+    background: #fff; /* Optional: Adds background for clarity */
+    border: 1px solid #ddd; /* Optional: Adds a border for visibility */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    overflow: hidden; /* Ensures content doesn’t overflow */
+}
+
+.img1 img, .img2 img {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Divider between image and text */
+}
+
+
+.text, .text2 {
+    padding: 15px; /* Adds space around the text */
+    
+}
+
+.text p, .text2 p {
+    margin: 5px 0; /* Spacing between paragraphs */
+    font-size: 20px; /* Adjust font size for readability */
+    color: #333; /* Text color */
+    text-align: justify;
+    font-family: 'Poppins',sans-serif;
+}
+
+.text p b, .text2 p b {
+    font-size: 16px; /* Emphasize bold text slightly */
+    color: #081b29;
+    font-size: large;
+}
+
+
+/*resume*/
+/* Existing styles for header, home, and grids */
+
+.job-experience {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #081b29;
+    border-radius: 10px;
+}
+
+.job {
+    margin-bottom: 30px;
+    position: relative; /* Necessary for the pseudo-element overlay */
+    overflow: hidden; /* Ensures overlay doesn't go beyond the container */
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.company {
+    font-style: italic;
+    color: #aaaaaa;
+    margin-left: 10px;
+}
+
+.duration {
+    font-size: 0.9em;
+    color: #bbbbbb;
+}
+
+.job-description {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 0.85em;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Hover effect for job item with lighter overlay */
+.job:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* Lighter transparent white overlay */
+    z-index: 1;
+}
+
+.job:hover .job-header h2,
+.job:hover .company,
+.job:hover .duration,
+.job:hover .job-description,
+.job:hover .tags {
+    color:#aaaaaa; /* Change text color to white on hover */
+    color: pink;
+}
+
+.job:hover .tags span {
+    background-color: palevioletred /* Darker background color for tags */
+}
+
