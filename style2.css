@@ -104,7 +104,8 @@ align-items: center;
     text-align: center;
     width: calc(33.333% - 20px); /* Ensures 3 items per row with space */
     max-width: 300px; /* Optional: Restrict maximum width for consistency */
-    background: #fff; /* Optional: Adds background for clarity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) ;
+    /* Optional: Adds background for clarity */
     border: 1px solid #ddd; /* Optional: Adds a border for visibility */
     border-radius: 10px; /* Optional: Adds rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
@@ -127,14 +128,14 @@ align-items: center;
 .text p, .text2 p {
     margin: 5px 0; /* Spacing between paragraphs */
     font-size: 20px; /* Adjust font size for readability */
-    color: #333; /* Text color */
+    color: #ededed;/* Text color */
     text-align: justify;
     font-family: 'Poppins',sans-serif;
 }
 
 .text p b, .text2 p b {
     font-size: 16px; /* Emphasize bold text slightly */
-    color: #081b29;
+    color: #ededed;
     font-size: large;
 }
 
@@ -147,19 +148,23 @@ align-items: center;
     margin: 40px auto;
     padding: 20px;
     background-color: #081b29;
+    border: 1px solid #ddd;
     border-radius: 10px;
+    
 }
 
 .job {
     margin-bottom: 30px;
     position: relative; /* Necessary for the pseudo-element overlay */
     overflow: hidden; /* Ensures overlay doesn't go beyond the container */
+    
 }
 
 .job-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    
 }
 
 .job-header h2 {
@@ -222,4 +227,108 @@ align-items: center;
 .job:hover .tags span {
     background-color: palevioletred /* Darker background color for tags */
 }
+/*forms and contact info*/
 
+
+/* Contact Section Styles */
+#contact {
+    padding: 64px 0;
+    color: #ededed;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #ededed;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#contact hr {
+    width: 200px;
+    border: none;
+    height: 2px;
+    background-color: #e69595;
+    margin: 20px auto;
+}
+
+#contact .w3-section p {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .w3-section i {
+    margin-right: 10px;
+    color: #ededed;
+}
+
+#contact p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0f2c40;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+form p {
+    margin: 15px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #1a3a4f;
+    color: #ededed;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #999999;
+}
+
+form button {
+    background-color: #e69595;
+    color: #081b29;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button i {
+    margin-right: 10px;
+}
+
+form button:hover {
+    background-color: #edb0b0;
+}
+
+/* Footer Section Styles */
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer i {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #ededed;
+    transition: color 0.3s ease;
+}
+
+footer i:hover {
+    color: #e69595;
+}

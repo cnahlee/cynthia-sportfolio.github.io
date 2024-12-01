@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cynthi's portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style2.css">
     
 </head>
@@ -13,8 +14,8 @@
         <nav class="navbar">
             <a href="#" class="active">About</a>
             <a href="#1">Projects</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact me</a>
+            <a href="#exp">Experience</a>
+            <a href="#contact">Contact me</a>
         </nav>
       
     </header>
@@ -35,14 +36,16 @@
         <img src="/img/43.jpeg" alt="Cynthia's photo" class="profile-pic">
     </section>
 
-    <section class="job-experience">
+    <section class="job-experience" id="exp">
       <!-- First Job -->
       <div class="job">
           <div class="job-header">
               <h2>Internship</h2>
+              
               <span class="company">leadByTech</span>
               <span class="duration">3/2023 — 10/2024</span>
           </div>
+          <hr class="custom-line">
           <p class="job-description">
              
             I build projects using HTML, CSS, JavaScript, and React to create dynamic and responsive websites. I collaborate with cross-functional teams, including developers, designers, and product managers, to deliver high-quality web solutions.
@@ -55,13 +58,16 @@
       <!-- Second Job -->
       <div class="job">
           <div class="job-header">
+            
               <h2>Volunteer</h2>
               <span class="company">Red Cross</span>
               <span class="duration">2022 — 2023</span>
           </div>
+          <hr class="custom-line">
           <p class="job-description">
             As a volunteer at the Lebanese Red Cross Youth Center, I collaborate with a team to organize community events, workshops, and educational programs. My role involves engaging with local youth, providing assistance during emergency response drills, and contributing to various outreach initiatives aimed at promoting social awareness and health education.
         </p>
+        
         <div class="tags">
             <span>Community Outreach</span><span>Event Coordination</span><span>Social Awareness</span>
         </div>
@@ -113,10 +119,51 @@
       <img src="/img/3.jpg" alt="Norway" style="width:100%" >
       <div class="text2">
         <p ><b>E-school </b></p>
-        <p>II developed an advanced E-School management system using Java Swing for the UI, mastering Java by designing and implementing a robust database seamlessly integrated with the application.</p>
+        <p>I developed an advanced E-School management system using Java Swing for the UI, mastering Java by designing and implementing a robust database seamlessly integrated with the application.</p>
       </div>
     </div>
   </div>
+
+<!-- Contact Section -->
+<div class="contact-section" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <hr class="section-divider">
+
+  <div class="contact-info">
+    <p><i class="fa fa-map-marker fa-fw icon"></i> Beirut, Lebanon</p>
+    <p><i class="fa fa-phone fa-fw icon"></i> Phone: 7147398</p>
+    <p><i class="fa fa-envelope fa-fw icon"></i> Email: cynthianahle123@gmail.com</p>
+  </div>
   
+  <p class="contact-message">Let's get in touch. Send me a message:</p>
+
+  <form class="contact-form" action="" target="_blank">
+    <p><input class="form-input" type="text" placeholder="Name" required name="Name"></p>
+    <p><input class="form-input" type="text" placeholder="Email" required name="Email"></p>
+    <p><input class="form-input" type="text" placeholder="Subject" required name="Subject"></p>
+    <p><textarea class="form-textarea" placeholder="Message" required name="Message"></textarea></p>
+    <p>
+      <button class="form-button" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </p>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <i class="fa fa-facebook-official social-icon"></i>
+  <i class="fa fa-instagram social-icon"></i>
+  <i class="fa fa-snapchat social-icon"></i>
+  <i class="fa fa-pinterest-p social-icon"></i>
+  <i class="fa fa-twitter social-icon"></i>
+  <i class="fa fa-linkedin social-icon"></i>
+</footer>
+
+
+<!-- END PAGE CONTENT -->
+</div>
+
 </body>
 </html>
+
