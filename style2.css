@@ -1,148 +1,129 @@
-*
-{
+/* General Reset and Styling */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background-color: #081b29;
     color: #ededed;
+    line-height: 1.6;
 }
-.header
-{
-    position: relative;
-    top:0;
-    left:0;
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 20px 10%;
-   
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index:100;
-    
+    z-index: 100;
+    background-color: #081b29;
 }
-.profile-pic {
-    width: 400px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: auto; 
-}
-.logo
-{
+
+.logo {
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
-    color:#ededed;
-    font-size:18px;
+    color: #ededed;
+    font-size: 18px;
     font-weight: 500;
     margin-left: 35px;
 }
+
 .navbar a:hover,
-.navbar a.active
-{
-    color: #e69595; 
+.navbar a.active {
+    color: #e69595;
 }
 
-.home
-{
-display: flex;
-height: 100vh;/*ba3adton aan el nav bar*/
-align-items: center;
-padding: 0 10%;
-align-items: center;
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: row; /* Default layout */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    min-height: 100vh;
 }
-.home-content{
-    max-width: 600px;
+
+.home-content {
+    max-width: 50%;
 }
-.home-content h1{
+
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
+}
 
-}
-.home-content  h3{
+.home-content h3 {
     font-size: 36px;
-    font-weight:700 ;
-    color:#e69595;
-}
-.home-content .animate
-{
-    position:relative;
-    width:32.8rem;
-}
-.home-content .animate h3{
-    font-size: 3.2rem;
     font-weight: 700;
-   
-    -webkit-text-stroke: .7px var(--main-color);
+    color: #e69595;
 }
-.home-content p{
+
+.home-content p {
     font-size: 16px;
+    margin-top: 10px;
 }
-/* General grid container styles */
+
+.profile-pic {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Grid Sections */
 .firstgrid, .secondgrid {
     display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap onto the next row if needed */
-    max-width: 1200px;
-    gap: 20px; /* Adds consistent spacing between items */
-    margin: 0 auto; /* Centers the grid */
-    justify-content: center; /* Ensures alignment in the center */
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 5%;
 }
 
-/* Individual image containers */
 .img1, .img2 {
+    width: calc(33.333% - 20px);
+    max-width: 300px;
     display: flex;
-    flex-direction: column; /* Align image and text vertically */
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    width: calc(33.333% - 20px); /* Ensures 3 items per row with space */
-    max-width: 300px; /* Optional: Restrict maximum width for consistency */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) ;
-    /* Optional: Adds background for clarity */
-    border: 1px solid #ddd; /* Optional: Adds a border for visibility */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
-    overflow: hidden; /* Ensures content doesn’t overflow */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #0f2c40;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .img1 img, .img2 img {
-    width: 100%; /* Full width of the container */
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures images maintain aspect ratio */
-    border-bottom: 1px solid #ddd; /* Divider between image and text */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-
 .text, .text2 {
-    padding: 15px; /* Adds space around the text */
-    
+    padding: 15px;
+    color: #ededed;
 }
 
 .text p, .text2 p {
-    margin: 5px 0; /* Spacing between paragraphs */
-    font-size: 20px; /* Adjust font size for readability */
-    color: #ededed;/* Text color */
-    text-align: justify;
-    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
-.text p b, .text2 p b {
-    font-size: 16px; /* Emphasize bold text slightly */
-    color: #ededed;
-    font-size: large;
-}
-
-
-/*resume*/
-/* Existing styles for header, home, and grids */
-
+/* Work Experience Section */
 .job-experience {
     max-width: 800px;
     margin: 40px auto;
@@ -150,26 +131,24 @@ align-items: center;
     background-color: #081b29;
     border: 1px solid #ddd;
     border-radius: 10px;
-    
 }
 
 .job {
     margin-bottom: 30px;
-    position: relative; /* Necessary for the pseudo-element overlay */
-    overflow: hidden; /* Ensures overlay doesn't go beyond the container */
-    
+    position: relative;
+    overflow: hidden;
 }
 
 .job-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    
 }
 
 .job-header h2 {
     margin: 0;
     font-size: 1.5em;
+    color: #ededed;
 }
 
 .company {
@@ -185,7 +164,7 @@ align-items: center;
 
 .job-description {
     margin: 10px 0;
-    line-height: 1.6;
+    color: #ededed;
 }
 
 .tags {
@@ -203,34 +182,7 @@ align-items: center;
     border-radius: 20px;
 }
 
-/* Hover effect for job item with lighter overlay */
-.job:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.4); /* Lighter transparent white overlay */
-    z-index: 1;
-}
-
-.job:hover .job-header h2,
-.job:hover .company,
-.job:hover .duration,
-.job:hover .job-description,
-.job:hover .tags {
-    color:#aaaaaa; /* Change text color to white on hover */
-    color: pink;
-}
-
-.job:hover .tags span {
-    background-color: palevioletred /* Darker background color for tags */
-}
-/*forms and contact info*/
-
-
-/* Contact Section Styles */
+/* Contact Section */
 #contact {
     padding: 64px 0;
     color: #ededed;
@@ -238,35 +190,15 @@ align-items: center;
 }
 
 #contact h2 {
-    color: #ededed;
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 #contact hr {
     width: 200px;
-    border: none;
     height: 2px;
     background-color: #e69595;
     margin: 20px auto;
-}
-
-#contact .w3-section p {
-    font-size: 18px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#contact .w3-section i {
-    margin-right: 10px;
-    color: #ededed;
-}
-
-#contact p {
-    margin: 20px 0;
-    font-size: 16px;
 }
 
 form {
@@ -276,10 +208,6 @@ form {
     background-color: #0f2c40;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-form p {
-    margin: 15px 0;
 }
 
 form input, form textarea {
@@ -293,10 +221,6 @@ form input, form textarea {
     font-size: 14px;
 }
 
-form input::placeholder, form textarea::placeholder {
-    color: #999999;
-}
-
 form button {
     background-color: #e69595;
     color: #081b29;
@@ -308,15 +232,11 @@ form button {
     cursor: pointer;
 }
 
-form button i {
-    margin-right: 10px;
-}
-
 form button:hover {
     background-color: #edb0b0;
 }
 
-/* Footer Section Styles */
+/* Footer Section */
 footer {
     text-align: center;
     margin-top: 50px;
@@ -324,11 +244,41 @@ footer {
 
 footer i {
     margin: 0 10px;
-    cursor: pointer;
     color: #ededed;
     transition: color 0.3s ease;
 }
 
 footer i:hover {
     color: #e69595;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic {
+        width: 80%;
+    }
+
+    .firstgrid .img1, .secondgrid .img2 {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-header h2, .company, .duration {
+        font-size: 1rem;
+    }
 }
